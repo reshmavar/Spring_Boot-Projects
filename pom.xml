@@ -5,29 +5,41 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.1</version>
+		<version>2.2.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>SpringMvc-2</artifactId>
+	<groupId>com.springboot</groupId>
+	<artifactId>amazonclone</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringMvc-2</name>
+	<name>amazonclone</name>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
-		<java.version>17</java.version>
+		<java.version>1.8</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-hateoas</artifactId>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-test</artifactId>        
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.thymeleaf</groupId>
+		    <artifactId>thymeleaf</artifactId>
+		    <version>3.0.11.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,13 +53,61 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+		    <version>2.2.5.RELEASE</version>
 		</dependency>
+	<dependency>
+	    <groupId>org.springframework.session</groupId>
+	    <artifactId>spring-session-data-mongodb</artifactId>
+	    <version>2.3.0.RELEASE</version>
+	</dependency>
+
+		<dependency>
+		    <groupId>nz.net.ultraq.thymeleaf</groupId>
+		    <artifactId>thymeleaf-layout-dialect</artifactId>
+		    <version>2.4.1</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>com.algolia</groupId>
+		  <artifactId>algoliasearch-core</artifactId>
+		  <version>3.6.1</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>com.algolia</groupId>
+		  <artifactId>algoliasearch-apache</artifactId>
+		  <version>3.6.1</version>
+		</dependency>
+		 <dependency>
+		    <groupId>io.github.kaiso.relmongo</groupId>
+		    <artifactId>relmongo</artifactId>
+		    <version>3.3.1</version>
+		 </dependency>
+		 
+		 <dependency>
+		    <groupId>org.thymeleaf.extras</groupId>
+		    <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
+
+		
+			    
+	    
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
